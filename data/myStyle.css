@@ -1,0 +1,186 @@
+	@font-face {
+		font-family: Chalk;
+		src: url(../media/Rollcage.otf);
+	}
+
+	#logo {
+		font-family: Chalk;
+		font-size: 2.5em;
+	}
+
+    #price {
+		font-size: 2.5em;
+		margin: 20px;
+	}
+
+	#reserveBtn {
+		margin: 50px;
+	}
+
+	#googleMap {
+		width:100% !important;
+		height:400px !important;
+		bottom:0px !important;
+		left:0px !important;
+		padding: 0px !important;
+		margin: 0px !important;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+	#footer {
+		background-color:#333333;
+		color: white;
+		padding: 20px;
+		text-align: center;
+		left: 0;
+		bottom:0;
+	}
+
+	.navbar {
+		background-color:#333333;
+		opacity: 0.8;
+		border: 0;
+		font-size: 15px !important;
+		letter-spacing: 1px;
+	}
+
+	.navbar li a, .navbar .navbar-brand {
+        color: #fff !important;
+		display:block;
+		padding: 20px;
+	}
+
+
+	.navbar-nav li a:hover, .navbar-nav li.active a {
+		background-color: #fff !important;
+		color:#333333 !important;
+	}
+
+	.navbar-default .navbar-toggle {
+
+	}
+
+	.bg-grey {
+	   background-color: #E0E0E0;
+	}
+
+
+	.bg-picture {
+	   background-color:black;
+	}
+
+	.logo {
+        font-size: 200px;
+    }
+
+   .carousel-control.right, .carousel-control.left {
+		color:#fff;
+    }
+
+	.carousel-indicators li {
+		border-color:#fff;
+		opacity: 0.9;
+	}
+	.carousel-indicators li.active {
+		background-color:#fff;
+		opacity: 0.9;
+	}
+
+	.carousel-caption h2,.carousel-caption h4 {
+		color:#fff;
+		text-shadow: 0 0 6px black, 0 0 15px black, 0 0 25px black;
+	}
+
+    .frame {
+	    position: relative;
+		background-color:white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		padding: 10px;
+		margin: 20px;
+	}
+
+	.caption {
+	    position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: .5s ease;
+		background-color:#333333;
+	}
+
+	.caption:hover {
+		opacity: 0.8;
+	}
+
+	.text-gallery {
+	  font-size: 2.0em;
+		text-align:center;
+		color: white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+	}
+
+	.img-gallery {
+	    width: auto;
+		height:250px;
+		object-fit: contain;
+		padding-top:10px;
+	}
+
+	.btn-roll, #basketClose {
+		background: red;
+		opacity: 0.5;
+		color:white;
+		border-radius: 0px 0px 10px 10px !important;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		transition: .5s ease;
+	}
+
+	.btn-roll:hover, #basketClose:hover  {
+		color: white !important;
+		opacity: 1 !important;
+	}
+
+	@media only screen and (max-width: 800px){
+		.img-gallery {
+			height: 150px;
+		}
+		.text-gallery {
+			font-size: 1.0em;
+		}
+		#logo {
+		font-size: 1.2em;
+		}
+		.carousel-inner, .carousel-inner .item {
+			height:250px;
+			width:auto:
+		}
+		.carousel-inner .item img {
+		    max-width: 250%;
+			height: 400px;
+		}
+	}
+
+	@media only screen and (max-width: 500px){
+		.img-gallery {
+			height: 100px;
+		}
+	    #logo {
+		font-size: 1.5em;
+		}
+		.carousel-inner, .carousel-inner .item {
+			height:400px;
+			width:auto:
+		}
+		.carousel-inner .item img {
+		    max-width: 250%;
+			height: 400px;
+		}
+	}

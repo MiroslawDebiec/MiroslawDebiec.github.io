@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="data/myStyle.css">
+	<script src="data/myScript.js"></script>
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-KRox9szmJVoP2v0cwj6A5_GvYlqMlbg&callback=initMap">
+    </script>
+
+</head>
+
+<body id="indexpage" data-spy="scroll" data-target=".navbar" data-offset="150" onload="getDate()">
+
+<!--SECTION - NAVBAR -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#" id="logo">Charly's Bakery</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navigation">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#indexpage">HOME <i class="glyphicon glyphicon-home"></i></a></li>
+				<li><a href="#aboutus">ABOUT US <i class="glyphicon glyphicon-user"></i></a></li>
+				<li><a href="#ourrange">OUR RANGE <i class="glyphicon glyphicon-barcode"></i></a></li>
+				<li><a href="#contactus">CONTACT US <i class="glyphicon glyphicon-envelope"></i></a></li>
+				<li onclick="showBasket()"><a href="#">BASKET <i class="glyphicon glyphicon-shopping-cart"></i> <span class="badge">0</span></a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+<!--SECTION - CAROUSEL -->
+<div id="myCarousel" class="carousel slide bg-picture" data-ride="carousel">
+	<ol class="carousel-indicators">
+		<li dat-target="#mySlides" data-slide-to="0" class="active"></li>
+		<li dat-target="#mySlides" data-slide-to="1"></li>
+		<li dat-target="#mySlides" data-slide-to="2"></li>
+    </ol>
+
+	<div class="carousel-inner">
+		<div class="item active">
+			<img src="media/breadOneS.jpg" alt="Imgae One">
+			<div class="carousel-caption">
+				<h2 style="font-family: chalk;">Charly's Bakery.</h2>
+				<h4>We are family run busines since 1899.</h4>
+			</div>
+		</div>
+		<div class="item">
+			<img src="media/breadTwoS.jpg" alt="Imgae One">
+			<div class="carousel-caption">
+				<h2>Get your freshly baked bread at any time of the day</h2>
+				<h4>Just reserve online and pick up you freshly baked loaf at any time of the day.</h4>
+			</div>
+		</div>
+		<div class="item">
+			<img src="media/breadThreeS.jpg" alt="Imgae One">
+			<div class="carousel-caption">
+				<h2>At <span  style="font-family: chalk;">Charly's Bakery</span> we put quality first.</h2>
+				<h4>We only bake with finest organic ingredients</h4>
+			</div>
+		</div>
+	</div>
+
+	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+</div>
+
+<!--SECTION - ABOUT -->
+<div class="container" id="aboutus" style="padding:20px; margin-bottom:30px;">
+	<div class="col-sm-12" style="padding:10px;">
+		<div class="row">
+		<h1 style="text-align:left;">Welcome to <span style="font-family:chalk; font-size:1.5em;">Charly's Bakery</span></h1>
+			<div style="text-align:left;" class="lead">We are a family business with over a 100 years of experience in baking the greatest bread. We use only the finest ingredients from sustainable sources and put the quality of our products first.</div>
+		<hr>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="box">
+					<p style="text-align:justify; font-style: italic; padding:10px; margin:20px 50px;">We bake bread and rolls all day *(from 8am to 9pm) and you can order online and we will make it ready for you at your convinienc.</p>
+					<a class="btn btn-default center-block" href="#ourrange" style="font-family:chalk; font-size:1.5em; width:80%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Our Range</a>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="box">
+					<p style="text-align:justify; font-style: italic; padding:10px; margin:20px 50px;">We are conviniently located in the city center with easy access via 'Main Street' and just round the corner from 'Arena House Building'.</p>
+					<a class="btn btn-default center-block" href="#contactus" style="font-family:chalk; font-size:1.5em; width:80%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Contact Us</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!--SECTION - OUR RANGE -->
+<div class="container-fluid bg-grey" id="ourrange" style="padding:20px 0px 40px 0px;">
+	<div class="container">
+		<h2>Our Range <i class="glyphicon glyphicon-barcode"></i></h2>
+
+		<div class="col-sm-4 col-xs-6">
+			<div class ="frame" id="country">
+				<img src="media/country.jpg" alt="Country Style" style="width:100%" class="img-gallery">
+				<div class="caption">
+					<div class="text-gallery">Country Style </br> Only £1.99</br><span class="btn btn-default"> Click Here </span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-4 col-xs-6">
+			<div class ="frame" id="sunflower">
+				<img src="media/sunflower.jpg" alt="Rustic" style="width:100%" class="img-gallery">
+				<div class="caption">
+					<div class="text-gallery">Rustic Bread </br> Only £1.78</br><span class="btn btn-default"> Click Here </span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-4 col-xs-6">
+			<div class ="frame" id="baguette">
+				<img src="media/baguette.jpg" alt="Baguette" style="width:100%" class="img-gallery">
+				<div class="caption">
+					<div class="text-gallery">Crispy Baguette </br> Only £1.49</br><span class="btn btn-default"> Click Here </span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-4 col-xs-6">
+			<div class ="frame" id="raisen">
+			<img src="media/raisen.jpg" alt="Raisen" style="width:100%" class="img-gallery">
+				<div class="caption">
+					<div class="text-gallery">Raisen Bread </br> Only £2.29</br><span class="btn btn-default"> Click Here </span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-4 col-xs-6">
+			<div class ="frame" id="rosebread">
+			<img src="media/rosebred.jpg" alt="Rosebread" style="width:100%" class="img-gallery">
+				<div class="caption">
+					<div class="text-gallery">Rosebread Roll</br> Only £0.59</br><span class="btn btn-default"> Click Here </span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-4 col-xs-6">
+			<div class ="frame" id="potato">
+				<img src="media/potato.jpg" alt="Potato" style="width:100%" class="img-gallery">
+				<div class="caption">
+					<div class="text-gallery">Potato Bread Roll </br> Only £0.47</br><span class="btn btn-default"> Click Here </span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--SECTION - ITEM DECRIPTION-->
+<div class="container" style="display:none" id="item-description">
+	<div class="row">
+	<hr>
+		<div class="col-xs-12">
+			<button type="button" class="btn btn-roll btn-lg pull-right">Back <span class="glyphicon glyphicon-menu-down"></span></button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<img src="" alt="Item2" style="width:100%" id="img-description">
+		</div>
+		<div class="col-md-6">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 style="font-family: chalk;" id="name-description"></h1>
+					<p id="text-descriprion"></p>
+					<hr>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="row"><div class="text text-center" id="price">Only: £<span id="price-description"></span></div></div>
+					<div class="row"><div class="col-xs-offset-4 col-xs-4">
+					<div class="form-group"><label>Quantity:</label><input id="quantityInput" class="form-control input-lg" type="number" min="1" value="1"></div>
+					</div>
+					</div>
+					<div class="row">
+					<button id="order-button" style="margin-bottom:20px;" type="submit" name="order" class="btn btn-primary btn-lg center-block" data-toggle="modal" data-target="#addedToBasket" onclick="addToBasket()">Add to Basket</button>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<label>Ingredients:</label>
+					<p style="text-align:justify" id="ingredients-description"></p>
+					<p><label>Weight:</label> <span id="weight-description"></span></p>
+					<p><label>Energy:</label> <span id="energy-description"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+</div>
+
+<!--SECTION - BASKET -->
+<div class="container" id="basket" style="display:none">
+	<div class="row">
+		<button type="button" id="basketClose" class="btn btn-lg pull-right">Close <span class="glyphicon glyphicon-remove"></span></button>
+	</div>
+	<div class="row">
+		<h2><span style="font-family:chalk">Charly's Bakery</span> - Your Basket:</h2>
+		<hr>
+	</div>
+	<div class="row">
+		<table class="table table-condensed">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Product Name</th>
+					<th>Qunatity</th>
+					<th>Price</th>
+					<th>Total</th>
+				<tr>
+			</thead>
+			<tbody id="orderTable">
+			</tbody>
+		</table>
+	</div>
+	<div class="row">
+		<hr>
+		<div class="col-md-8">
+
+<!--SECTION - COMPLETION FORM -->
+		<div class="container-fluid" id="orderForm" style="display:none">
+		<form>
+			<div class="form-group">
+				<div class="input-group">
+				    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+					<input id="name" type="text" class="form-control" name="name" placeholder="Name">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="input-group">
+				    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+					<input id="email" type="email" class="form-control" name="email" placeholder="Email">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="input-group">
+				    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+						<select class="form-control" type="time" id="orderTime">
+							<option selected disabled>Select Time</option>
+							<option>8:00 am</option>
+							<option>9:00  am</option>
+							<option>10:00 am</option>
+							<option>11:00 am</option>
+							<option>12:00 am</option>
+							<option>1:00  pm</option>
+							<option>2:00  pm</option>
+							<option>3:00  pm</option>
+							<option>4:00  pm</option>
+							<option>5:00  pm</option>
+							<option>6:00  pm</option>
+							<option>7:00  pm</option>
+							<option>8:00  pm</option>
+							<option>9:00  pm</option>
+						</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="input-group">
+				    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+						<select class="form-control" id="orderDate">
+							<option selected disabled>Select Day</option>
+								<option id="day1"></option>
+								<option id="day2"></option>
+								<option id="day3"></option>
+								<option id="day4"></option>
+								<option id="day5"></option>
+							</select>
+				</div>
+			</div>
+</form>
+		</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="form-group">
+				<h2 style="text-align:center">Your Total: £<span id="orderTotal"></span></h2>
+			</div>
+			<div class="form-group">
+				<button id="checkoutBtn" style="width:50%"; class="btn btn-primary btn-lg center-block" onclick="submitOrder()">Go to Checkout</button>
+			</div>
+			<div class="form-group">
+				<p id="errorLabel" style="display:block; text-align:center">*Click above to submit your order.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!--SCTION - MODAL MESSAGE -->
+<div id="modal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title" style="text-align:center" id="modalMessage"></h4>
+			</div>
+			<div class="modal-footer">
+				<div class="col-xs-12"><button class="btn btn-primary center-block" data-dismiss="modal">OK</button></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!--SECTION - CONTACT FORM -->
+<div class="container" id="contactus" style="padding:20px 0px 40px 0px;">
+	<div class="col-sm-6">
+	<h2>Contact Us <i class="glyphicon glyphicon-envelope"></i></h2>
+	<div class="row text-center">
+		<div class="col-sm-12">
+			<form>
+			<div class="row">
+				<div class="col-sm-6 form-group">
+					<input class="form-control" id="nameCt" name="name" placeholder="Name" type="text" required>
+				</div>
+				<div class="col-sm-6 form-group">
+					<input class="form-control" id="emailCt" name="email" placeholder="Email" type="email" required>
+				</div>
+			</div>
+			<textarea class="form-control" id="commentsCt" name="comments" placeholder="Comment" rows="5" required></textarea><br>
+			<div class="row">
+				<div class="col-sm-12 form-group">
+					<button class="btn btn-default pull-right" type="submit">Send</button>
+				</div>
+			</div>
+			</form>
+				<p><b>Feel free to visit us:</b></p>
+				<p><span class="glyphicon glyphicon-map-marker"></span> 24 Main Street, BT1 2AB, BELFAST</p>
+				<p><span class="glyphicon glyphicon-phone"></span> Phone: +028 123-456-789</p>
+				<p><span class="glyphicon glyphicon-envelope"></span> Email: contact@charlysbaker.com</p>
+		</div>
+	</div>
+	</div>
+	<div class="col-sm-6">
+		<div id="googleMap"></div>
+	</div>
+</div>
+
+<div class="container-fluid" id="footer" style="position:r; bottom: 0; right:0;">
+
+<small>Website created as a part of courswork for COM308 HCI module, created by Miroslaw Debiec (B00540796).</small></br>
+<small>Resources used:	<a href="http://getbootstrap.com">Boostrap</a> (available at: http://getbootstrap.com),		<a href="http://jquery.com/">jQuery</a> (available at:http://jquery.com/),
+	<a href="http://glyphicons.com/">Glyphicons</a> (available at: http://glyphicons.com/).</small>
+
+</div>
+</body>
+</html>
+</small>
